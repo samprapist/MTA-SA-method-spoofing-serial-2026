@@ -12,9 +12,9 @@ Below I am including all the sources I used:
 ```php
 Use temp-spoofer from my attachment because it is modified
 https://www.unknowncheats.me/forum/anti-cheat-bypass/742461-windows-kernel-driver-temp-spoofer.html
-github kdmapper
-github MAC-Address-Spoofer
-github HWIDInspector
+https://github.com/TheCruZ/kdmapper
+https://github.com/Scrut1ny/Windows-MAC-Address-Spoofer
+https://github.com/boshyxd/HWIDInspector
 and others
 ```
 
