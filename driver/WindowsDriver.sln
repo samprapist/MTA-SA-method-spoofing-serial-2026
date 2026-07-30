@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowsDriver", "WindowsDriver.vcxproj", "{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		ReleaseWithSpoofer|ARM64 = ReleaseWithSpoofer|ARM64
+		ReleaseWithSpoofer|x64 = ReleaseWithSpoofer|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Debug|ARM64.Build.0 = Debug|ARM64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Debug|x64.ActiveCfg = Debug|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Debug|x64.Build.0 = Debug|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Debug|x64.Deploy.0 = Debug|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Release|ARM64.ActiveCfg = Release|ARM64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Release|ARM64.Build.0 = Release|ARM64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Release|ARM64.Deploy.0 = Release|ARM64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Release|x64.ActiveCfg = Release|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Release|x64.Build.0 = Release|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.Release|x64.Deploy.0 = Release|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.ReleaseWithSpoofer|ARM64.ActiveCfg = ReleaseWithSpoofer|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.ReleaseWithSpoofer|ARM64.Build.0 = ReleaseWithSpoofer|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.ReleaseWithSpoofer|ARM64.Deploy.0 = ReleaseWithSpoofer|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.ReleaseWithSpoofer|x64.ActiveCfg = ReleaseWithSpoofer|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.ReleaseWithSpoofer|x64.Build.0 = ReleaseWithSpoofer|x64
+		{DEAD5E0B-61CA-47D6-B0D0-2629E04AB7C0}.ReleaseWithSpoofer|x64.Deploy.0 = ReleaseWithSpoofer|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBFEBCF8-F895-40A1-831D-CAE4F8E08F25}
+	EndGlobalSection
+EndGlobal

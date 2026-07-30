@@ -1,0 +1,197 @@
+﻿Wymagane uprawnienia administratora
+Wyłącz wszelkie opcje windows defender, wyłącz lub usuń anty wirusa
+W cmd jako administrator dodaj swój dysk systemowy do wykluczeń: powershell -Command "Add-MpPreference -ExclusionPath 'c:\'"
+
+
+Od teraz wyłącz mta oraz gta sa i nie włączaj
+
+Pobierz wymagane oprogramowanie z req_soft.txt PYTHON zainstaluj dopiero na nowym użytkowniku.
+
+Pobierz, każdy pobrany program wypakuj do folderu w którym znajduje się plik z linkiem do pobrania tego programu:
+\spoof_method_release\Windows-MAC-Address-Spoofer-main\download.txt
+\spoof_method_release\HWIDInspector-main\download.txt
+\spoof_method_release\cleaning scripts\INSTALL_SUDO_BEFORE_CLEAN.txt
+\spoof_method_release\driver\x64\Release\download_kdmapper.txt WYMAGA SKOMPILOWANIA zrób to!
+
+Skompiluj rozwiązanie kdmapper, plik exe wrzuć do \spoof_method_release\driver\x64\Release\
+Skompiluj rozwiązanie \spoof_method_release\driver lub użyj już skompilowanego .sys
+ zalecam otworzyć rozwiązanie i zmienić klucze rejestru na swoje nazwy w main.cpp! Najlepiej użyć nazw istniejących programów!
+
+[PRZED URUCHOMIENIEM SKRYPTÓW BAT UPEWNIJ SIĘ ŻE BĘDĄ DZIAŁAĆ NA DYSKU SYSTEMOWYM ORAZ NA DYSKU GDZIE ZNAJDUJĄ SIĘ PLIKI MTA]
+
+WIN + R > wpisz cmd > ctrl + shift + enter > cd twoja_sciezka\spoof_method_release\cleaning scripts
+ Skrypty uruchamiasz wpisując nazwę w cmd
+Wpisz clean_mta.bat i czekaj aż skończy
+
+Wpisz samp_reg_remove.bat i czekaj aż skończy
+
+(UWAGA Poniższy skrypt usuwa dane tymczasowe, w których mogą się znajdować dane programów z których korzystasz!)
+Wpisz clear_temp_data.bat i czekaj aż skończy
+Usuń pliki instalacyjne mtasa-1.6.exe lub inne pliki instalacyjne mta w folderze w którym zapisujesz pobrane pliki
+
+Kliknij skrót WIN + R i wpisz ms-settings:otherusers
+ Kliknij Dodaj > nie mam informacji... > dodaj bez użytkownika > wymyśl nową nazwe użytkownika > kliknij na nowe konto na liscie >
+  > zmień typ konta > administrator > ok
+
+Kliknij skrót WIN + R wpisz cmd kliknij ctrl + shift + enter i wpisz net user Administrator /active:yes
+ ctrl + alt + delete wyloguj się, zaloguj się na nowe konto, wyloguj się i zaloguj się na konto Administrator
+
+Po zalogowaniu się na konto administrator kliknij win + r i wpisz 
+ control folders > widok > Ukryte pliki lub foldery > Pokaż ukryte pliki... > zastosuj
+
+
+UWAGA poniższe operacje na appdata mogą uszkodzić/usunąć dane z których korzystają wszelkie programy na twoim systemie
+ Robisz to na WŁASNĄ ODPOWIEDZIALNOŚĆ, jeśli masz jakieś dane które mogą być przechowywane w AppData przed operacją spakuj cały
+  folder w archiwum jako backup lecz może to troche zająć.
+
+Otwórz scieżkę dysk_systemowy\Users
+ Wejdź w folder z nazwą twojego starego konta, zaznacz wszystko co potrzebujesz oprócz "AppData" i kliknij WYTNIJ
+
+Wróć do folderu Users, wejdź w folder z nową nazwą użytkownika i wklej tam wszystkie dane
+
+Następnie wróć do folderu twojego starego użytkownika i wejdź w folder appdata, na PULPICIE stwórz foldery Local, LocalLow, Roaming
+
+Następnie na pulpicie otwórz każdy z powyższych folderów, wróć do folderu appdata
+ Po koleji wykonaj poniższe operacje dla Local, LocalLow, Roaming
+  Przenieś foldery z nazwami programów na których ci zależy do folderów na pulpicie
+   Czyli: pliki z folderu appdata/Local przenoszę do folderu Local na pulpicie
+ 
+Z każdego folderu minimum zalecam przenieść foldery o nazwie: 
+ [każdy który ma w nazwie Microsoft], VisualStudio, chrome/mozilla/inna przeglądarka której używasz, AMD/ATI/NVIDIA,
+  [nazwy z programami na których ci zależy]
+ 
+Następnie otwórz folder users/z nową nazwą użytkownika i otwórz lub stwórz folder AppData jesli go nie ma
+ Do AppData wklej wszystkie foldery z pulpitu: local,locallow,roaming i zastąp
+
+
+
+Kliknij WIN + R netplwiz i kliknij ctrl + shift + enter
+
+[Ten krok usunie wszystkie dane użytkownika!] 
+
+Kliknij na liście na swoje stare konto a następnie usuń
+
+Wróć do folderu AppData i usuń folder z nazwą twojego starego konta i opróżnij kosz
+
+Otwórz regedit pod kluczem HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
+W profile list przejrzyj pod-klucze i patrząc na parametr ProfileImagePath patrz czy nie ma starego konta
+
+Kliknij WIN + R wpisz cmd i kliknij ctrl + shift + enter
+Wpisz net user Administrator /active:no i uruchom ponownie komputer, następnie zaloguj się na nowe konto
+
+Zainstaluj jakiś VPN lub nie jeśli już posiadasz przyda się potem
+ 
+ Najlepiej usuń stare gta sa i zainstaluj aby scieżka wygłądała tak C:\Program Files (x86)\Rockstar Games\GTA San Andreas
+ 
+Otwórz regedit z scieżką HKEY_LOCAL_MACHINE\SOFTWARE\, kliknij prawym na SOFTWARE > Nowy > Klucz > wpisz nazwe [TWOJA_NAZWA]
+ jeśli nie zmieniłeś nazwy w main.cpp wpisz "changeme", utwórz w changeme/twoja_nazwa QWORD 64 changemeSerialSeed/twoja_nazwa
+  kliknij dziesiętny, wpisz losowy ciąg cyfr o maksymalnej długośći 10, to jest twoje ziarno aby twoje dane nie były ciągle losowe
+
+
+Otwórz spoof_method_release\HWIDInspector-main\
+ wpisz w cmd pip install -r requirements.py
+  następnie otwórz HWIDInspector.py, gui kliknij Restart as Admin
+   w OverView na samej górze, skopiuj swoje oryginalne parametry jeśli
+    będziesz chciał do nich wrócić MachineGuid, computer name, Installation id.
+     Zapisz swoje parametry w bezpiecznym miejscu. Kliknij generate GUID i apply changes,
+   	  uruchom random_name.bat, skopiuj wygenerowaną nazwe i wklej w computer name, kliknij 
+	   generate installationID, kliknij rename Computer i set installationID i zamknij program.
+ 
+Otwórz cmd jako administrator wpisz getmac, skopiuj swoje oryginalne adresy i zapisz w bezpiecznym pliku.
+ otwórz \spoof_method_release\Windows-MAC-Address-Spoofer-main\WMAS.bat jako administrator, powtórz dla
+  każdego NIC > Randomize MAC address i zamknij.
+ 
+ Otwórz regedit jako administrator HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CI\Config
+  Utwórz DWORD 32-bit > nazwa: VulnerableDriverBlocklistEnable > Wartość: 0
+  
+ Otwórz HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\
+  Jeśli istnieje pod-klucz HypervisorEnforcedCodeIntegrity otwórz, jeśli nie, utwórz podklucz w scenarios HypervisorEnforcedCodeIntegrity
+   Otwórz HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity
+    Utwórz DWORD 32-bit > nazwa: Enabled > wartość: 0
+
+Wyłącz komputer, następnie sprawdź w bios czy posiadasz opcje Secure Boot i wyłącz, jeśli nie masz nic nie rób. Uruchom ponownie.
+ 
+[UWAGA JEŚLI DRIVER ZADZIAŁA NIEPRAWIDŁOWO MOŻE DOPROWADZIĆ DO USZKODZENIA SYSTEMU PRZY SPOOFINGU DYSKU!]
+ 
+Wejdź do \spoof_method_release\driver\x64\Release kliknij win + r wpisz cmd, wpisz w cmd cd ...\spoof_method_release\driver\x64\Release
+ uruchom: kdmapper_Release.exe WindowsDriver.sys. Jeśli nie dostałeś bsod i sterownik się załadował, sprawdź rejestr                
+  HKEY_LOCAL_MACHINE\SOFTWARE\[twoja_nazwa] w tym kluczu, sterownik powinien stworzyć wartości o statusie spoof, oraz status
+   załadowania seed z którego generowane są id danych podzespołów, to ważne aby posiadać stałe ziarno ponieważ będziemy mieć stały serial.
+    
+	JEŚLI WSZYSTKO DZIAŁA USUŃ WSZYSTKIE KLUCZE OPRÓCZ KLUCZA Z TWOIM SEED.
+
+Uruchom cmd jako administrator wpisz:
+bcdedit /set testsigning on
+bcdedit /set nointegritychecks on
+
+Przejdź do \spoof_method_release\cleaning scripts uruchom jako administrator clear_temp_data.bat.
+
+Przejdź do głownego folderu gta sa, skopiuj do folderu głównego plik spoof_method_release\cleaning scripts\randomizer_gta_installation.bat
+ uruchom jako administrator. Gdy skrypt skończy prace usuń go.
+ 
+[UWAGA JEŚLI DRIVER ZADZIAŁA NIEPRAWIDŁOWO MOŻE DOPROWADZIĆ DO USZKODZENIA SYSTEMU PRZY SPOOFINGU DYSKU!]
+
+W C:\ProgramData stwórz folder z nazwą programu który istnieje np dolby, do folderu wrzuć plik
+ spoof_method_release\driver\x64\Release\WindowsDriver.sys i zmień na swoją nazwe np dolby.sys.
+ WYMYŚL NAZWE
+  Następnie uruchom cmd jako administrator i wpisz
+   sc create dolby binPath= "C:\ProgramData\dolby\dolby.sys" type= kernel start= auto
+
+ Wejdź w menu start, od teraz trzymaj cały czas SHIFT, kliknij uruchom ponownie, uruchamia się awaryjne menu
+  rozwiąż problemy > opcje zaawansowane > ustawienia uruchamiania > uruchom ponownie
+   czekasz na restart komputera a następnie wybierasz opcje WYŁĄCZ WYMUSZANIE PODPISÓW STEROWNIKÓW
+   
+Sprawdź w rejestrze czy klucze zostały stworzone, jeśli statusy spoofingu mają wartość 1 udało się, to prawie koniec.
+ 
+Przejdź do \spoof_method_release\cleaning scripts uruchom jako administrator clear_temp_data.bat. 
+Przejdź do \spoof_method_release\cleaning scripts uruchom jako administrator emul_temp_data.bat.
+ Jeśli wyświetlą się ustawienia windows/czyszczenie dysku wyłącz to.
+
+Pobierz https://yogadns.com/download/YogaDNSSetup.exe i zainstaluj
+ Uruchom program i zaimportuj konfiguracje \spoof_method_release\cleaning scripts\yoga.xml 
+  configuration > rules > sprawdź czy zasady mta istnieją, wyłącz je i kliknij okej.
+  
+ 
+
+
+Uruchom VPN i korzystaj z niego zawsze gdy łączysz się z mta lub włączasz mta.
+ Otwórz okno prywatne przeglądarki lub użyj przeglądarki mullvad, pobierz instalator mta.
+  Uruchom Yogadns, wejdź w rules i zaznacz wszystko dla mta, kliknij okej.
+   otwórz cmd, wpisz ping multitheftauto.com, jesli nie odpowiada jest okej.
+
+
+zainstaluj mta normalnie, uruchom mta, mogą wystąpić crashe mta lub wyłączanie mta bez błedu po zobaczeniu menu,
+  uruchom mta tak 3 razy, nie przejmuj się. Następnie wyłącz wszystkie programy związane z mta.
+  
+
+Przejdź do \spoof_method_release\cleaning scripts uruchom jako administrator clean_mta.bat.
+Przejdź do \spoof_method_release\cleaning scripts uruchom jako administrator clear_temp_data.bat.
+Przejdź do \spoof_method_release\cleaning scripts uruchom jako administrator emul_temp_data.bat.
+ Przejdź do głownego folderu gta sa, skopiuj do folderu głównego plik spoof_method_release\cleaning scripts\randomizer_gta_installation.bat
+  Uruchom skrypt jako administrator i go usuń.
+ 
+Otwórz cmd jako administrator i wpisz: 
+  sc stop twoja_nazwa
+  sc delete twoja_nazwa
+   bcdedit /set testsigning off
+   bcdedit /set nointegritychecks off
+ 
+Następnie usuń folder C:\ProgramData\twoja_nazwa i uruchom komputer ponownie. Jeśli nie możesz usunąć, zmień nazwę i folderu i usuń po restarcie. Uruchom ponownie komputer.
+
+Wejdź do \spoof_method_release\driver\x64\Release kliknij win + r wpisz cmd, wpisz w cmd cd ...\spoof_method_release\driver\x64\Release
+ uruchom: kdmapper_Release.exe twoj_sterownik.sys. Od teraz zawsze gdy zamierzasz włączyć mta, musisz to robić przed włączeniem.
+
+Włącz yogadns upewnij się że mta jest blokowane. Zainstaluj mta i stwórz lokalny serwer.
+ po wejściu na serwer odpal konsole i wpisz serial, serial powinien się zmienić. Wyjdź z mta.
+ 
+Przejdź do \spoof_method_release\cleaning scripts uruchom jako administrator clean_mta.bat.
+Przejdź do \spoof_method_release\cleaning scripts uruchom jako administrator clear_temp_data.bat.
+Przejdź do \spoof_method_release\cleaning scripts uruchom jako administrator emul_temp_data.bat.
+ Przejdź do głownego folderu gta sa, skopiuj do folderu głównego plik spoof_method_release\cleaning scripts\randomizer_gta_installation.bat
+  Uruchom skrypt jako administrator i go usuń.
+ 
+
+Uruchom YogaDNS configuration > rules > wyłącz wszystkie zasady dla mta i kliknij okej.
+ Zainstaluj mta ponownie, uruchom vpn i możesz smiało wchodzić na serwery w internecie.
+ 
+By: thorus.m47k0j3bc4

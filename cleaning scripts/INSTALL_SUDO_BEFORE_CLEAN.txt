@@ -1,0 +1,3 @@
+https://www.majorgeeks.com/mg/getmirror/nsudo,1.html
+
+extract the NSudo Launcher folder here

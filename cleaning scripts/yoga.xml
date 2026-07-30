@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<YogaDnsProfile file_format="1" product_id="1" product_min_version="127000">
+	<Settings ignore_rule_if_interface_down="0" blockTcpPort53="1" clearDnsCache="1" ttlMin="0" ttlMax="2147483647" captivePortalDetection="0" interceptOthers="0">
+		<DnsChecker testTarget="iana.org" testsPerTime="15" importUrls="https://yogadns.com/resolvers/resolvers.md
+https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md
+https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/relays.md
+" />
+	</Settings>
+	<Rule name="mta" enabled="1" dnssec_local_validation="0" dnssec_reject_unsigned="0" block_return_zero_ip="1" hostnames="www.multitheftauto.com" action="block" action_id="0" interface_id="" interface_id_type="id" interface_name="" />
+	<Rule name="New Rule" enabled="1" dnssec_local_validation="0" dnssec_reject_unsigned="0" block_return_zero_ip="1" hostnames="*.multitheftauto.com" action="block" action_id="0" interface_id="" interface_id_type="id" interface_name="" />
+	<Rule name="mtaa" enabled="1" dnssec_local_validation="0" dnssec_reject_unsigned="0" block_return_zero_ip="1" hostnames="www.mta.com" action="block" action_id="0" interface_id="" interface_id_type="id" interface_name="" />
+	<Rule name="mtaaa" enabled="1" dnssec_local_validation="0" dnssec_reject_unsigned="0" block_return_zero_ip="1" hostnames="*.mta.com" action="block" action_id="0" interface_id="" interface_id_type="id" interface_name="" />
+	<Rule name="Default" enabled="1" dnssec_local_validation="0" dnssec_reject_unsigned="0" hostnames="*" action="process_server" action_id="1003" interface_id="" interface_id_type="id" interface_name="" />
+	<DnsServer id="1001" name="Google DoH" protocol="doh" af="2" ip="8.8.8.8" dnssec_supported="1" doh_host_name="dns.google" doh_path="/dns-query" />
+	<DnsServer id="1003" name="Google DoH" protocol="doh" af="2" ip="8.8.8.8" dnssec_supported="1" doh_host_name="dns.google" doh_path="/dns-query" />
+</YogaDnsProfile>

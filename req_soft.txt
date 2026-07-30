@@ -1,0 +1,5 @@
+Download python, install ON NEW ACCOUNT
+Download visual studio 2022
+download wdk and sdk i use ver 26100.6584
+https://learn.microsoft.com/pl-pl/windows-hardware/drivers/other-wdk-downloads  
+https://learn.microsoft.com/pl-pl/windows-hardware/drivers/download-the-wdk
