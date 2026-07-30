@@ -10,7 +10,7 @@ If you managed to change your serial number, give me reputation in return:
 Below I am including all the sources I used:
 
 ```php
-Use temp-spoofer from my attachment because it is modified
+Use temp-spoofer from my git because it is modified
 https://www.unknowncheats.me/forum/anti-cheat-bypass/742461-windows-kernel-driver-temp-spoofer.html
 https://github.com/TheCruZ/kdmapper
 https://github.com/Scrut1ny/Windows-MAC-Address-Spoofer
